@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import hi from "./hi"
+import hi1 from "./hi1"
 import {getSchool} from "../api/api"
 export default {
     components:{
-        hi
+        hi1
     },
   data () {
     return {
@@ -72,7 +72,10 @@ export default {
      }
   },
   mounted(){
-      this.apiTest()
+    this.apiTest()
+
+    // var f=eval("(function(){alert('ss');})"); 
+    // f();//IE下报错：缺少对象 其他浏览器正常 
   }
 }
 </script>

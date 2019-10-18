@@ -42,7 +42,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
-    }
+    },
+    disableHostCheck: true, // 加这个就没事啦。
   },
   plugins: [
     new webpack.DefinePlugin({
