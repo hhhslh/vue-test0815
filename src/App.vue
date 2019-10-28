@@ -1,7 +1,15 @@
 <template>
   <div id="app">
-    <router-view/>
+      <p>导航 ：
+        <router-link to="/">首页</router-link> | 
+        <router-link to="/indexPage">indexPage页面</router-link> |
+        <router-link :to="{name:'hi1',params:{username:'slh',id:'666'}}">Hi页面1</router-link> |
+        <router-link to="/indexPage/hi2">Hi页面2</router-link>
+    </p>
+    <p>{{ $route.name}}</p>
+    <router-view></router-view>
   </div>
+  
 </template>
 
 <script>
