@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-      <p>导航 ：
-        <router-link to="/">首页</router-link> | 
-        <router-link to="/indexPage">indexPage页面</router-link> |
+    <p>导航 ：
+        <router-link to="/">indexPage页面</router-link> |
         <router-link :to="{name:'hi1',params:{username:'slh',id:'666'}}">Hi页面1</router-link> |
-        <router-link to="/indexPage/hi2">Hi页面2</router-link>
+        <router-link to="hi2/10001/新闻标题">Hi页面2</router-link>
+         <router-link to="/">goIndex</router-link>
+         <router-link to="/goHi2/10009/hi2新闻标题">goHi2</router-link>
     </p>
     <p>{{ $route.name}}</p>
     <router-view></router-view>
+    <router-view name="left"></router-view>
+    <router-view name="right"></router-view>
   </div>
   
 </template>

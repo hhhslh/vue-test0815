@@ -9,8 +9,12 @@ Vue.use(Router)
 
 export default new Router({
     routes: [{
-        path: '/indexPage',
-        component: indexPage,
+        path: '/',
+        components: {
+            default:indexPage,
+            left:hi1,
+            right:hi2
+        },
         children:[
             {
                 path: '/',
@@ -21,10 +25,16 @@ export default new Router({
                 name: 'hi1',
                 component: hi1
             }, {
-                path: 'hi2',
+                path: 'hi2/:newsId(\\d+)/:newsTitle',
                 name: 'hi2',
                 component: hi2
             }
         ]
-    }, ]
+    }, {
+        path:'/goIndex',
+        redirect:'/'
+    },{
+        path:'/goHi2/:newsId(\\d+)/:newsTitle',
+        redirect:'hi2/:newsId(\\d+)/:newsTitle'
+    }]
 })

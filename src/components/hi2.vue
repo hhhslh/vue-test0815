@@ -3,6 +3,8 @@
     <p>兄弟</p>
     <slot name="test"></slot>
     <slot :data="parentMsg.total"></slot>
+    <p>newsId:{{$route.params.newsId}}</p>
+    <p>newsTitle:{{$route.params.newsTitle}}</p>
 </div>
 </template>
 

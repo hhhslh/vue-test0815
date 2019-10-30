@@ -15,7 +15,7 @@
                 <p>作用域插槽{{user.data}}</p>
             </div>
         </hi2>
-        <router-view></router-view>
+        <!-- <router-view></router-view> -->
     </div>
 </template>
 
