@@ -18,6 +18,14 @@ export default {
             parentMsg:"",
         }
     },
+    beforeRouteEnter (to, from, next) {
+        console.log("进入hi2路由模板")
+        next()
+    },
+    beforeRouteLeave (to, from, next) {
+        console.log("离开hi2路由模板")
+        next()
+    },
     created(){
         var that=this
         Bus.$on('send',function(val){
